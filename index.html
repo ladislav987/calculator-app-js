@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Calculator app</title>
+
+  <link rel="stylesheet" href="./css/base.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
+  <main>
+    <div class="calcContainer">
+      <div class="headerContainer">
+        <h1>calc</h1>
+        <button>Theme</button>
+      </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="amountContainer">
+        <p id="amountOutput">0</p>
+      </div>
+
+      <div class="buttonsContainer">
+        <button id="del" class="btn" data-delete>DEL</button>
+        <button id="nine" class="white btn" data-number>9</button>
+        <button id="eight" class="white btn" data-number>8</button>
+        <button id="seven" class="white btn" data-number>7</button>
+        <button id="six" class="white btn" data-number>6</button>
+        <button id="five" class="white btn" data-number>5</button>
+        <button id="four" class="white btn" data-number>4</button>
+        <button id="three" class="white btn" data-number>3</button>
+        <button id="two" class="white btn" data-number>2</button>
+        <button id="one" class="white btn" data-number>1</button>
+        <button id="zero" class="white btn" data-number>0</button>
+        <button id="addition" class="white btn" data-operation>+</button>
+        <button id="subtraction" class="white btn" data-operation>-</button>
+        <button id="multiplication" class="white btn" data-operation>x</button>
+        <button id="division" class="white btn" data-operation>/</button>
+        <button id="decimalPoint" class="white btn" data-number>.</button>
+        <button id="reset" class="btn" data-all-clear>RESET</button>
+        <button id="equals" class="btn" data-equals>=</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./js/app.js"></script>
 </body>
+
 </html>
