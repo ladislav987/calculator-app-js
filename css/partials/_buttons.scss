@@ -1,0 +1,123 @@
+//? First row
+#del {
+    grid-area: del;
+
+    background-color: #616f95;
+    color: #fff;
+
+    font-size: 1.15rem;
+
+    border: 4px #414f76;
+    border-style: none none solid none;
+}
+#nine {
+    grid-area: nine;
+}
+#eight {
+    grid-area: eight;
+}
+#seven {
+    grid-area: seven;
+}
+
+//? Second row
+#addition {
+    grid-area: addition;
+}
+#six {
+    grid-area: six;
+}
+#five {
+    grid-area: five;
+}
+#four {
+    grid-area: four;
+}
+
+//? Third row
+#subtraction {
+    grid-area: subtraction;
+}
+#three {
+    grid-area: three;
+}
+#two {
+    grid-area: two;
+}
+#one {
+    grid-area: one;
+}
+
+//? Fourth row
+#multiplication {
+    grid-area: multiplication;
+}
+#division {
+    grid-area: division;
+}
+#zero {
+    grid-area: zero;
+}
+#decimalPoint {
+    grid-area: decimalPoint;
+}
+
+//? Fifth row
+#equals {
+    grid-area: equals;
+
+    background-color: #d13f30;
+    color: #fff;
+
+    border: 4px #9e2213;
+    border-style: none none solid none;
+}
+#reset {
+    grid-area: reset;
+
+    background-color: #647299;
+    color: #fff;
+
+    border: 4px #414f76;
+    border-style: none none solid none;
+
+    font-size: 1.2rem;
+}
+
+//? General
+.white {
+    background-color: #fff;
+    color: #484a59;
+
+    border: 4px #b3a195;
+}
+
+.white,
+#del {
+    width: 50px;
+    height: 50px;
+}
+
+.btn {
+    font-size: 2rem;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    border-style: none none solid none;
+}
+
+.white:active {
+    background-color: rgb(219, 219, 219);
+}
+
+#del:active,
+#reset:active
+ {
+    background-color: #3353ac;
+}
+
+#equals:active{
+    background-color: #ca1a06;
+}
