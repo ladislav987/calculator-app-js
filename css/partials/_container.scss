@@ -1,6 +1,6 @@
 .calcContainer {
     max-width: 80%;
-    
+
     margin: 5px auto 0;
 }
 
@@ -15,24 +15,28 @@
 }
 
 .amountContainer {
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: row;
+
     max-width: 85%;
 
     margin: 10px auto 20px;
 
-    text-align: right;
-
-    background-color: #181f32;
 
     border-radius: 10px;
 
-    p{
-
+    p {
         padding: 15px 10px 15px 0;
         font-size: 1.5rem;
         font-weight: bold;
         margin: 0;
     }
 
+    #amountOutput {
+        padding-left: 20px;
+    }
 }
 
 .buttonsContainer {
@@ -41,17 +45,16 @@
     display: grid;
     justify-content: center;
     grid-template-areas:
-        'seven eight nine del'
-        'four five six addition'
-        'one two three subtraction'
-        'decimalPoint zero division multiplication'
-        'reset reset equals equals';
+        "seven eight nine del"
+        "four five six addition"
+        "one two three subtraction"
+        "decimalPoint zero division multiplication"
+        "reset reset equals equals";
 
     gap: 10px;
 
     padding: 15px 0;
 
-    background-color: #232e44;
 
     border-radius: 10px;
     margin: 0 auto 20px;
