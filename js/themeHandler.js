@@ -35,14 +35,26 @@ function themeHandler() {
     if (themeClass === "theme-1") {
         themeSet = "theme-2";
         druhy.checked = true;
+        druhy.style.visibility = "visible";
+
+        prvy.style.visibility = "hidden";
+        treti.style.visibility = "hidden";
     }
     else if (themeClass === "theme-2") {
         themeSet= "theme-3";
         treti.checked = true;
+        treti.style.visibility = "visible";
+
+        prvy.style.visibility = "hidden";
+        druhy.style.visibility = "hidden";
     }
     else if (themeClass === "theme-3") {
         themeSet= "theme-1";
         prvy.checked = true;
+        prvy.style.visibility = "visible";
+
+        druhy.style.visibility = "hidden";
+        treti.style.visibility = "hidden";
     }
 
 
@@ -56,11 +68,20 @@ function themeHandler() {
 function radioBtnCheckSame() {
     if (themeClass === "theme-1") {
         prvy.checked = true;
+
+        druhy.style.visibility = "hidden";
+        treti.style.visibility = "hidden";
     }
     else if (themeClass === "theme-2") {
         druhy.checked = true;
+
+        prvy.style.visibility = "hidden";
+        treti.style.visibility = "hidden";
     }
     else if (themeClass === "theme-3") {
         treti.checked = true;
+
+        prvy.style.visibility = "hidden";
+        druhy.style.visibility = "hidden";
     }
 }

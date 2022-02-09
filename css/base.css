@@ -90,6 +90,10 @@ body {
   border-style: none none solid none;
 }
 
+#themeBtn {
+  cursor: pointer;
+}
+
 .switch-toggle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
