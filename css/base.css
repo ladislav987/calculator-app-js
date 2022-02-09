@@ -1,17 +1,11 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  background-color: #3b4664;
-  color: #fff;
 }
 
 #del {
   grid-area: del;
-  background-color: #616f95;
-  color: #fff;
   font-size: 1.15rem;
-  border: 4px #414f76;
-  border-style: none none solid none;
 }
 
 #nine {
@@ -76,28 +70,14 @@ body {
 
 #equals {
   grid-area: equals;
-  background-color: #d13f30;
-  color: #fff;
-  border: 4px #9e2213;
-  border-style: none none solid none;
 }
 
 #reset {
   grid-area: reset;
-  background-color: #647299;
-  color: #fff;
-  border: 4px #414f76;
-  border-style: none none solid none;
   font-size: 1.2rem;
 }
 
-.white {
-  background-color: #fff;
-  color: #484a59;
-  border: 4px #b3a195;
-}
-
-.white,
+.background,
 #del {
   width: 50px;
   height: 50px;
@@ -108,19 +88,6 @@ body {
   border-radius: 7px;
   font-weight: bold;
   border-style: none none solid none;
-}
-
-.white:active {
-  background-color: #dbdbdb;
-}
-
-#del:active,
-#reset:active {
-  background-color: #3353ac;
-}
-
-#equals:active {
-  background-color: #ca1a06;
 }
 
 .calcContainer {
@@ -138,10 +105,11 @@ body {
 }
 
 .amountContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   max-width: 85%;
   margin: 10px auto 20px;
-  text-align: right;
-  background-color: #181f32;
   border-radius: 10px;
 }
 
@@ -152,20 +120,167 @@ body {
   margin: 0;
 }
 
+.amountContainer #amountOutput {
+  padding-left: 20px;
+}
+
 .buttonsContainer {
   max-width: 85%;
   display: grid;
   justify-content: center;
-  grid-template-areas: 'seven eight nine del' 'four five six addition' 'one two three subtraction' 'decimalPoint zero division multiplication' 'reset reset equals equals';
+  grid-template-areas: "seven eight nine del" "four five six addition" "one two three subtraction" "decimalPoint zero division multiplication" "reset reset equals equals";
   gap: 10px;
   padding: 15px 0;
-  background-color: #232e44;
   border-radius: 10px;
   margin: 0 auto 20px;
 }
 
+.theme-1 {
+  background-color: #3b4664;
+  color: #fcffff;
+}
+
+.theme-1 .amountContainer {
+  background-color: #181f32;
+}
+
+.theme-1 .buttonsContainer {
+  background-color: #252d44;
+}
+
+.theme-1 #del,
+.theme-1 #reset {
+  color: #fff;
+  background-color: #616f95;
+  border: 4px #414f76;
+  border-style: none none solid none;
+}
+
+.theme-1 #equals {
+  color: #fff;
+  background-color: #d13f30;
+  border: #8f2316;
+  border-style: none none solid none;
+}
+
+.theme-1 .background {
+  color: #474d5b;
+  background-color: #e8e4db;
+  border: 4px #b2a295;
+  border-style: none none solid none;
+}
+
+.theme-1 #del:active,
+.theme-1 #reset:active {
+  background-color: #415ba5;
+}
+
+.theme-1 #equals:active {
+  background-color: #ec240e;
+}
+
+.theme-1 .background:active {
+  background-color: #f1e9d5;
+}
+
+.theme-2 {
+  background-color: #e6e6e6;
+  color: #38382e;
+}
+
+.theme-2 .amountContainer {
+  background-color: #eeeeee;
+}
+
+.theme-2 .buttonsContainer {
+  background-color: #d2cccc;
+}
+
+.theme-2 #del,
+.theme-2 #reset {
+  color: #fff;
+  background-color: #388187;
+  border: 4px #1b6067;
+  border-style: none none solid none;
+}
+
+.theme-2 #equals {
+  color: #fff;
+  background-color: #c85401;
+  border: #873600;
+  border-style: none none solid none;
+}
+
+.theme-2 .background {
+  color: #2d2d25;
+  background-color: #e5e4e0;
+  border: 4px #a99d91;
+  border-style: none none solid none;
+}
+
+.theme-2 #del:active,
+.theme-2 #reset:active {
+  background-color: #18757e;
+}
+
+.theme-2 #equals:active {
+  background-color: #dd6006;
+}
+
+.theme-2 .background:active {
+  background-color: #f3efe0;
+}
+
+.theme-3 {
+  background-color: #17062a;
+  color: #f0e06c;
+}
+
+.theme-3 .amountContainer {
+  background-color: #1e0836;
+}
+
+.theme-3 .buttonsContainer {
+  background-color: #1e0836;
+}
+
+.theme-3 #del,
+.theme-3 #reset {
+  color: #fff;
+  background-color: #56077a;
+  border: 4px #ba18f5;
+  border-style: none none solid none;
+}
+
+.theme-3 #equals {
+  color: #00292d;
+  background-color: #00decf;
+  border: #6ef7ef;
+  border-style: none none solid none;
+}
+
+.theme-3 .background {
+  color: #ebd42e;
+  background-color: #331b4d;
+  border: 4px #812296;
+  border-style: none none solid none;
+}
+
+.theme-3 #del:active,
+.theme-3 #reset:active {
+  background-color: #660792;
+}
+
+.theme-3 #equals:active {
+  background-color: #08ebdb;
+}
+
+.theme-3 .background:active {
+  background-color: #4e227e;
+}
+
 @media (min-width: 520px) {
-  .white,
+  .background,
   #del {
     width: 60px;
     height: 55px;
@@ -176,7 +291,7 @@ body {
 }
 
 @media (min-width: 605px) {
-  .white,
+  .background,
   #del {
     width: 75px;
     height: 59px;
@@ -187,7 +302,7 @@ body {
 }
 
 @media (min-width: 725px) {
-  .white,
+  .background,
   #del {
     width: 85px;
     height: 65px;
@@ -198,7 +313,7 @@ body {
 }
 
 @media (min-width: 800px) {
-  .white,
+  .background,
   #del {
     width: 90px;
     height: 65px;
