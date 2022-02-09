@@ -1,0 +1,209 @@
+//? Theme 1 variables
+$theme-1-body-background-color: #3b4664;
+
+$theme-1-amountContainer-background-color: #181f32;
+$theme-1-buttonsContainer-background-color: #252d44;
+
+$theme-1-fonts-color: #fcffff;
+
+$theme-1-delAndResetBtn-color: #fff;
+$theme-1-delAndResetBtn-background-color: #616f95;
+$theme-1-delAndResetBtn-border-color: #414f76;
+$theme-1-activeDelAndReset-color: #415ba5;
+
+$theme-1-equals-color: #fff;
+$theme-1-equals-background-color: #d13f30;
+$theme-1-equals-border-color: #8f2316;
+$theme-1-ActiveEquals-color: #ec240e;
+
+$theme-1-otherBtn-color: #474d5b;
+$theme-1-otherBtn-background-color: #e8e4db;
+$theme-1-otherBtn-border-color: #b2a295;
+$theme-1-ActiveOtherBtn-color: #f1e9d5;
+
+//? Theme 2 variables
+$theme-2-body-background-color: #e6e6e6;
+
+$theme-2-amountContainer-background-color: #eeeeee;
+$theme-2-buttonsContainer-background-color: #d2cccc;
+
+$theme-2-fonts-color: #38382e;
+
+$theme-2-delAndResetBtn-color: #fff;
+$theme-2-delAndResetBtn-background-color: #388187;
+$theme-2-delAndResetBtn-border-color: #1b6067;
+$theme-2-activeDelAndReset-color: #18757e;
+
+$theme-2-equals-color: #fff;
+$theme-2-equals-background-color: #c85401;
+$theme-2-equals-border-color: #873600;
+$theme-2-ActiveEquals-color: #dd6006;
+
+$theme-2-otherBtn-color: #2d2d25;
+$theme-2-otherBtn-background-color: #e5e4e0;
+$theme-2-otherBtn-border-color: #a99d91;
+$theme-2-ActiveOtherBtn-color: #f3efe0;
+
+//? Theme 3 variables
+$theme-3-body-background-color: #17062a;
+
+$theme-3-amountContainer-background-color: #1e0836;
+$theme-3-buttonsContainer-background-color: #1e0836;
+
+$theme-3-fonts-color: #f0e06c;
+
+$theme-3-delAndResetBtn-color: #fff;
+$theme-3-delAndResetBtn-background-color: #56077a;
+$theme-3-delAndResetBtn-border-color: #ba18f5;
+$theme-3-activeDelAndReset-color: #660792;
+
+$theme-3-equals-color: #00292d;
+$theme-3-equals-background-color: #00decf;
+$theme-3-equals-border-color: #6ef7ef;
+$theme-3-ActiveEquals-color: #08ebdb;
+
+$theme-3-otherBtn-color: #ebd42e;
+$theme-3-otherBtn-background-color: #331b4d;
+$theme-3-otherBtn-border-color: #812296;
+$theme-3-ActiveOtherBtn-color: #4e227e;
+
+.theme-1 {
+    background-color: $theme-1-body-background-color;
+    color: $theme-1-fonts-color;
+
+    .amountContainer {
+        background-color: $theme-1-amountContainer-background-color;
+    }
+
+    .buttonsContainer {
+        background-color: $theme-1-buttonsContainer-background-color;
+    }
+
+    #del,
+    #reset {
+        color: $theme-1-delAndResetBtn-color;
+        background-color: $theme-1-delAndResetBtn-background-color;
+        border: 4px $theme-1-delAndResetBtn-border-color;
+        border-style: none none solid none;
+    }
+
+    #equals {
+        color: $theme-1-equals-color;
+        background-color: $theme-1-equals-background-color;
+        border: $theme-1-equals-border-color;
+        border-style: none none solid none;
+    }
+
+    .background {
+        color: $theme-1-otherBtn-color;
+        background-color: $theme-1-otherBtn-background-color;
+        border: 4px $theme-1-otherBtn-border-color;
+        border-style: none none solid none;
+    }
+
+    #del:active,
+    #reset:active {
+        background-color: $theme-1-activeDelAndReset-color;
+    }
+
+    #equals:active {
+        background-color: $theme-1-ActiveEquals-color;
+    }
+
+    .background:active {
+        background-color:$theme-1-ActiveOtherBtn-color;
+    }
+}
+.theme-2 {
+    background-color: $theme-2-body-background-color;
+    color: $theme-2-fonts-color;
+
+    .amountContainer {
+        background-color: $theme-2-amountContainer-background-color;
+    }
+
+    .buttonsContainer {
+        background-color: $theme-2-buttonsContainer-background-color;
+    }
+
+    #del,
+    #reset {
+        color: $theme-2-delAndResetBtn-color;
+        background-color: $theme-2-delAndResetBtn-background-color;
+        border: 4px $theme-2-delAndResetBtn-border-color;
+        border-style: none none solid none;
+    }
+
+    #equals {
+        color: $theme-2-equals-color;
+        background-color: $theme-2-equals-background-color;
+        border: $theme-2-equals-border-color;
+        border-style: none none solid none;
+    }
+
+    .background {
+        color: $theme-2-otherBtn-color;
+        background-color: $theme-2-otherBtn-background-color;
+        border: 4px $theme-2-otherBtn-border-color;
+        border-style: none none solid none;
+    }
+
+    #del:active,
+    #reset:active {
+        background-color: $theme-2-activeDelAndReset-color;
+    }
+
+    #equals:active {
+        background-color:$theme-2-ActiveEquals-color;
+    }
+
+    .background:active {
+        background-color: $theme-2-ActiveOtherBtn-color;
+    }
+}
+.theme-3 {
+    background-color: $theme-3-body-background-color;
+    color: $theme-3-fonts-color;
+
+    .amountContainer {
+        background-color: $theme-3-amountContainer-background-color;
+    }
+
+    .buttonsContainer {
+        background-color: $theme-3-buttonsContainer-background-color;
+    }
+
+    #del,
+    #reset {
+        color: $theme-3-delAndResetBtn-color;
+        background-color: $theme-3-delAndResetBtn-background-color;
+        border: 4px $theme-3-delAndResetBtn-border-color;
+        border-style: none none solid none;
+    }
+
+    #equals {
+        color: $theme-3-equals-color;
+        background-color: $theme-3-equals-background-color;
+        border: $theme-3-equals-border-color;
+        border-style: none none solid none;
+    }
+
+    .background {
+        color: $theme-3-otherBtn-color;
+        background-color: $theme-3-otherBtn-background-color;
+        border: 4px $theme-3-otherBtn-border-color;
+        border-style: none none solid none;
+    }
+
+    #del:active,
+    #reset:active {
+        background-color: $theme-3-activeDelAndReset-color;
+    }
+    #equals:active {
+        background-color: $theme-3-ActiveEquals-color;
+    }
+
+    .background:active {
+        background-color:$theme-3-ActiveOtherBtn-color;
+    }
+}
