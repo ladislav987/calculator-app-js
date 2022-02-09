@@ -1,55 +1,75 @@
+@media (min-width: 350px) {
+
+    .headerContainer {
+        grid-template-columns: 1fr 25% 25%;
+    }
+}
+@media (min-width: 420px) {
+
+    .headerContainer {
+        grid-template-columns: 1fr 20% 20%;
+    }
+}
 @media (min-width: 520px) {
     .background,
     #del {
-        width: 60px ;
-        height: 55px ;
+        width: 60px;
+        height: 55px;
     }
 
     .calcContainer {
-        margin: 10px auto 0 ;
+        margin: 10px auto 0;
+    }
+
+    .headerContainer {
+        grid-template-columns: 1fr 17% 17%;
     }
 }
 
 @media (min-width: 605px) {
     .background,
     #del {
-        width: 75px ;
-        height: 59px ;
+        width: 75px;
+        height: 59px;
     }
 
     .calcContainer {
-        margin: 15px auto 0 ;
+        margin: 15px auto 0;
     }
 }
 
 @media (min-width: 725px) {
     .background,
     #del {
-        width: 85px ;
-        height: 65px ;
+        width: 85px;
+        height: 65px;
     }
 
     .calcContainer {
-        margin: 25px auto 0 ;
+        margin: 25px auto 0;
+    }
+
+    .headerContainer {
+        grid-template-columns: 1fr 13% 15%;
     }
 }
 
 @media (min-width: 800px) {
     .background,
     #del {
-        width: 90px ;
-        height: 65px ;
+        width: 90px;
+        height: 65px;
     }
 
     .calcContainer {
-        max-width: 700px ;
-        margin: 25px auto 0 ;
+        max-width: 700px;
+        margin: 25px auto 0;
     }
 }
 
 @media (min-width: 1000px) {
     .calcContainer {
-        max-width: 700px ;
-        margin: 70px auto 0 ;
+        max-width: 700px;
+        margin: 70px auto 0;
     }
 }

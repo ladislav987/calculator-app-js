@@ -83,3 +83,34 @@
 
     border-style: none none solid none;
 }
+
+
+
+#themeBtn{
+    // max-height: 50px;
+}
+
+
+
+.switch-toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+label{
+    grid-row: 1;
+    color: white;
+}
+input{
+    grid-row: 2;
+
+}
+
+#themeBtn{
+    align-items: end;
+    gap: 15px;
+
+    border-radius: 20px;
+    border: 0;
+}

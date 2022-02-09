@@ -7,8 +7,12 @@
 .headerContainer {
     max-width: 85%;
     margin: 0 auto;
-    display: flex;
+
+    display: grid;
+    grid-template-columns: 1fr 12% 13%;
+
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
 
     padding: 0 10px;

@@ -44,6 +44,8 @@ $theme-2-otherBtn-background-color: #e5e4e0;
 $theme-2-otherBtn-border-color: #a99d91;
 $theme-2-ActiveOtherBtn-color: #f3efe0;
 
+$theme-2-label-color: #070706;
+
 //? Theme 3 variables
 $theme-3-body-background-color: #17062a;
 
@@ -159,6 +161,10 @@ $theme-3-ActiveOtherBtn-color: #4e227e;
 
     .background:active {
         background-color: $theme-2-ActiveOtherBtn-color;
+    }
+
+    label{
+        color: $theme-2-label-color;
     }
 }
 .theme-3 {
