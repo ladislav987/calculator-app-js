@@ -1,27 +1,27 @@
 const themeButton = document.getElementById("themeBtn");
 const body = document.getElementById("body");
 
-const prvy = document.getElementById("oneIne");
-const druhy = document.getElementById("twoIne");
-const treti = document.getElementById("threeIne");
+const first = document.getElementById("inputOne");
+const second = document.getElementById("inputTwo");
+const third = document.getElementById("inputThree");
 
-var themeClass = window.localStorage.getItem("theme") || window.localStorage.setItem("theme", "theme-1");
+let themeClass = window.localStorage.getItem("theme") || window.localStorage.setItem("theme", "theme-1");
 
 
 
 if (document.getElementById("body").className == "") {
     if (themeClass == undefined) {
         body.classList.add("theme-1");
-        prvy.checked = true;
+        first.checked = true;
     }
     else {
         body.classList.add(themeClass);
-        radioBtnCheckSame();
+        radioBtnCheck();
     }
 }
 
 
-themeButton.addEventListener("click", () =>{
+themeButton.addEventListener("click", () => {
     themeHandler();
 });
 
@@ -34,27 +34,27 @@ function themeHandler() {
 
     if (themeClass === "theme-1") {
         themeSet = "theme-2";
-        druhy.checked = true;
-        druhy.style.visibility = "visible";
+        second.checked = true;
+        second.style.visibility = "visible";
 
-        prvy.style.visibility = "hidden";
-        treti.style.visibility = "hidden";
+        first.style.visibility = "hidden";
+        third.style.visibility = "hidden";
     }
     else if (themeClass === "theme-2") {
-        themeSet= "theme-3";
-        treti.checked = true;
-        treti.style.visibility = "visible";
+        themeSet = "theme-3";
+        third.checked = true;
+        third.style.visibility = "visible";
 
-        prvy.style.visibility = "hidden";
-        druhy.style.visibility = "hidden";
+        first.style.visibility = "hidden";
+        second.style.visibility = "hidden";
     }
     else if (themeClass === "theme-3") {
-        themeSet= "theme-1";
-        prvy.checked = true;
-        prvy.style.visibility = "visible";
+        themeSet = "theme-1";
+        first.checked = true;
+        first.style.visibility = "visible";
 
-        druhy.style.visibility = "hidden";
-        treti.style.visibility = "hidden";
+        second.style.visibility = "hidden";
+        third.style.visibility = "hidden";
     }
 
 
@@ -65,23 +65,23 @@ function themeHandler() {
 
 }
 
-function radioBtnCheckSame() {
+function radioBtnCheck() {
     if (themeClass === "theme-1") {
-        prvy.checked = true;
+        first.checked = true;
 
-        druhy.style.visibility = "hidden";
-        treti.style.visibility = "hidden";
+        second.style.visibility = "hidden";
+        third.style.visibility = "hidden";
     }
     else if (themeClass === "theme-2") {
-        druhy.checked = true;
+        second.checked = true;
 
-        prvy.style.visibility = "hidden";
-        treti.style.visibility = "hidden";
+        first.style.visibility = "hidden";
+        third.style.visibility = "hidden";
     }
     else if (themeClass === "theme-3") {
-        treti.checked = true;
+        third.checked = true;
 
-        prvy.style.visibility = "hidden";
-        druhy.style.visibility = "hidden";
+        first.style.visibility = "hidden";
+        second.style.visibility = "hidden";
     }
 }

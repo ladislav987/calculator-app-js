@@ -1,17 +1,16 @@
 const buttonsContainer = document.getElementsByClassName("buttonsContainer")[0];
 
-var inputNumber = " ";
-var firstNumbers = 0;
-var secondNumbers = 0;
-var result = 0;
-var sign = "";
+let inputNumber = " ";
+let firstNumbers = 0;
+let secondNumbers = 0;
+let result = 0;
+let sign = "";
 
-var firstTime = true;
+let firstTime = true;
 
 buttonsContainer.addEventListener('click', event => {
-    let elementID = event.target.id;
 
-    switch (elementID) {
+    switch (event.target.id) {
         case "nine":
             addNumber(9);
             break;
@@ -57,23 +56,20 @@ buttonsContainer.addEventListener('click', event => {
             break;
 
         case "addition":
-            operaciaZnamienka(inputNumber, "addition");
+            mathOperation("addition");
 
             break;
 
         case "subtraction":
-            operaciaZnamienka(inputNumber, "subtraction");
-            clearInput();
+            mathOperation("subtraction");
             break;
 
         case "multiplication":
-            operaciaZnamienka(inputNumber, "multiplication");
-            clearInput();
+            mathOperation("multiplication");
             break;
 
         case "division":
-            operaciaZnamienka(inputNumber, "division");
-            clearInput();
+            mathOperation("division");
             break;
 
         case "decimalPoint":
@@ -82,11 +78,11 @@ buttonsContainer.addEventListener('click', event => {
 
         case "reset":
             resetCalculator();
-            resetVysledok();
+            clearResult();
             break;
 
         case "equals":
-            spocitaj();
+            count();
             break;
     }
 })
@@ -97,30 +93,30 @@ buttonsContainer.addEventListener('click', event => {
 
 function addNumber(number) {
     inputNumber += number;
-    document.getElementById("amountInput").innerHTML = inputNumber;
+    amountInput(inputNumber);
 }
 
-function operaciaZnamienka(number, znamienko) {
-    if (znamienko != undefined) {
-        sign = znamienko;
+function mathOperation(signFunction) {
+    if (signFunction != undefined) {
+        sign = signFunction;
     }
 
     if (firstTime) {
-        firstNumbers = Number(number);
+        firstNumbers = Number(inputNumber);
         firstTime = false;
         clearInput();
     }
     else {
-        secondNumbers = Number(number);
+        secondNumbers = Number(inputNumber);
         clearInput();
     }
 }
 
 
 
-function spocitaj() {
+function count() {
     if (secondNumbers == 0) {
-        operaciaZnamienka(inputNumber);
+        mathOperation();
     }
 
     if (1) {
@@ -137,14 +133,14 @@ function spocitaj() {
             result = firstNumbers / secondNumbers;
         }
     }
-    document.getElementById("amountOutput").innerHTML = result;
+    amountOutput(result);
 
     resetCalculator();
 }
 
 
 function clearInput() {
-    document.getElementById("amountInput").innerHTML = 0;
+    amountInput(0);
     inputNumber = "";
 }
 
@@ -157,29 +153,25 @@ function resetCalculator() {
     sign = "";
     firstTime = true;
 
+    amountInput(0);
 }
 
-function resetVysledok() {
-    document.getElementById("amountOutput").innerHTML = 0;
+function clearResult() {
+    amountOutput(0);
     result = 0;
 }
 
 function deleteLastCharacter() {
     let result = inputNumber.slice(0, -1);
     inputNumber = result;
-    document.getElementById("amountInput").innerHTML = inputNumber;
+    amountInput(inputNumber);
 }
 
 
+function amountOutput(arg) {
+    document.getElementById("amountOutput").innerHTML = arg;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+function amountInput(arg) {
+    document.getElementById("amountInput").innerHTML = arg;
+}
