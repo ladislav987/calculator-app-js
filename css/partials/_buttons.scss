@@ -85,14 +85,6 @@
 }
 
 
-
-#themeBtn{
-    cursor: pointer;
-}
-
-
-
-
 .switch-toggle {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -109,9 +101,11 @@ input{
 }
 
 #themeBtn{
+    cursor: pointer;
     align-items: end;
     gap: 15px;
 
     border-radius: 20px;
+    padding: 10px;
     border: 0;
 }
