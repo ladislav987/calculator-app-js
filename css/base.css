@@ -90,10 +90,6 @@ body {
   border-style: none none solid none;
 }
 
-#themeBtn {
-  cursor: pointer;
-}
-
 .switch-toggle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -110,9 +106,11 @@ input {
 }
 
 #themeBtn {
+  cursor: pointer;
   align-items: end;
   gap: 15px;
   border-radius: 20px;
+  padding: 10px;
   border: 0;
 }
 
@@ -261,6 +259,10 @@ input {
 
 .theme-2 label {
   color: #070706;
+}
+
+.theme-2 #themeBtn {
+  background-color: #cecccc;
 }
 
 .theme-3 {
